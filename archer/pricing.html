@@ -1,0 +1,78 @@
+<html>
+	<head>
+		<title> Archer Case Prep </title>
+		<meta charset="utf-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+		<script type = "text/javascript" language = "javascript">
+         $(document).ready(function() {
+         	$(".card").fadeOut(0);
+            $(".first").fadeIn(1000, function(){$(".second").fadeIn(1000)});
+            $(".first").hover(function(){
+         		$( ".shakeable" ).effect("shake", {direction: "up", times: 1, distance: 10});
+         	});
+         });
+         
+      </script>
+
+	</head>
+	<body>		
+		<div class="jumbotron text-center bg-primary" style="margin-bottom:0">
+  			<img src="./images/Archer_Logo.png"/> 
+		</div>
+		<section class="pricing py-5">
+		  <div class="container">
+		    <div class="row">
+		      
+		      <div class="col-lg-4">
+		        <div class="second card mb-5 mb-lg-0">
+		          <div class="card-body rounded">
+		            <h5 class="card-title text-muted text-uppercase text-center">Weekly</h5>
+		            <h6 class="card-price text-center">$19<span class="period">/week</span></h6>
+		            <hr>
+		            <p>If your interview is soon and you want access to the material quickly and affordably, look no further! Get access to all of the material for just $19. </p>
+		            <br />
+		            <br />
+		            <br />
+		            <a href="#" class="btn btn-block btn-primary text-uppercase">Purchase</a>
+		          </div>
+		        </div>
+		      </div>
+		      <div class="col-lg-4">
+		        <div class="first card mb-5 mb-lg-0">
+		          <div class="card-body bg-primary text-white rounded shadow-lg">
+		            <h5 class="card-title text-white text-uppercase text-center">Annually</h5>
+		            <h6 class="card-price text-center"><strike class="text-light">$49</strike> $39<span class="period">/month</span></h6>
+		            <img src="./images/best-value.png" style="width: 40%; height: auto; margin-top: -100px; margin-right: -45px; float: right"/>
+		            <hr>
+		            <p>Great for students early in their college career or people who want the best value and won't be interviewing for a while. This option allows the longest access to the material while getting the most affordable price.</p>
+		            <br />
+		            <a href="#" class="shakeable btn btn-block btn-primary text-uppercase bg-warning shadow-lg border-dark text-white"><b>Purchase</b></a>
+		          </div>
+		        </div>
+		      </div>
+		  
+		      <div class="col-lg-4">
+		        <div class="second card">
+		          <div class="card-body rounded">
+		            <h5 class="card-title text-muted text-uppercase text-center">Monthly</h5>
+		            <h6 class="card-price text-center">$49<span class="period">/month</span></h6>
+		            <hr>
+		            <p>Perhaps you've just started applying or don't have any interviews scheduled yet, but want to start preparing. No time like the present! Choose our monthly plan if you want no long-term commitment. </p>
+		            <br />
+
+		            <br />
+		            <a href="#" class="btn btn-block btn-primary text-uppercase">Purchase</a>
+		          </div>
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+		</section>
+
+	</body>
+</html>
