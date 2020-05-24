@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<title> Jake Bates - Home</title>
+		<meta charset="utf-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+		<script type = "text/javascript" language = "javascript">
+         $(document).ready(function() {
+         	$(".block").fadeOut(0);
+            $(".first").fadeIn(1000, function(){$(".second").slideDown(750, function(){$(".third").fadeIn(750)})});
+            $(".first").hover(function(){
+         		$( ".shakeable" ).effect("shake", {direction: "up", times: 1, distance: 10});
+         	});
+         });
+         
+      </script>
+	</head>
+  <body>
+    <div class="container">
+      <div class="page-header">
+        <h1>Jake Bates</h1>
+        <hr/>
+      </div>
+      <div class="row">
+          <div class="headshot col-md-6 h-100">
+            <div class="block second"><img class="img-fluid" src="./assets/images/headshot.png"/></div>
+          </div>
+          <div class= "bio col-md-6 align-middle text-left hidden-sm">
+            <div class = "block first">
+              <p style="padding-top: 35%">Hello! My name is Jake Bates. I am a Junior at the University of Massachusetts Boston studying Computer Science. I have taken courses in Data Structures, Algorithms, C, and Unix, Databases, in addition to a variety of math classes and Honors College coursework. I have experience in all kinds of software engineering including web and mobile app development, both professionally and recreationally. You can check out more of my resume <a href ="./assets/resume.pdf">here</a> and my personal projects <a href="https://github.com/jpbates13">here</a>.</p>
+            </div>
+          </div>
+      </div>
+    </div>
+    <footer class="page-footer text-center block third">
+      <br><br>
+    <p>Copyright &copy <script type="text/javascript">document.write( new Date().getFullYear() );</script> JakeBates.com</p>
+    </footer>
+  </body>
+</html>
