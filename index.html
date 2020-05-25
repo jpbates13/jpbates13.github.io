@@ -9,7 +9,6 @@
   	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 		<script type = "text/javascript" language = "javascript">
-    <script>
          $(document).ready(function() {
          	$(".block").fadeOut(0);
             $(".first").fadeIn(1000, function(){$(".second").slideDown(750, function(){$(".third").fadeIn(750)})});
@@ -19,26 +18,18 @@
          });
          
       </script>
-      <style>
-      @media only screen and (min-width: 767px){
-        .footer {
-          position: fixed;
-          left: 0;
-          bottom: 0;
-          width: 100%;
-          text-align: center;
-        }
-      }
-      </style>
 	</head>
   <body>
     <div class="container">
-     <iframe src="./header.html" frameborder="0"></iframe>
+      <div class="header page-header">
+       <h1>Jake Bates</h1>
+       <hr/>
+      </div>
       <div class="row d-flex h-100">
-          <div class="headshot col-md-6">
-            <div class="block second"><br><img class="img-fluid" src="./assets/images/headshot.png"/></div>
+          <div class="headshot col-md-6 justify-content-center">
+             <div class="block second"><br><img style="max-width: 75%; height: auto" class="img-fluid" src="./assets/images/headshot.png"/></div>
           </div>
-          <div class= "bio col-md-6 align-middle text-left hidden-sm justify-content-center align-self-center">
+          <div class= "bio col-md-6 align-middle text-left hidden-sm align-self-auto">
             <div class = "block first">
               <p>Hello! My name is Jake Bates. I am a Junior at the University of Massachusetts Boston studying Computer Science. I have taken courses in Data Structures, Algorithms, C, Unix, and Databases, in addition to a variety of math classes and Honors College coursework. I have experience in all kinds of software engineering including web and mobile app development, both professionally and recreationally. You can check out more of my resume <a href ="./assets/resume.pdf">here</a> and my personal projects <a href="https://github.com/jpbates13">here</a>.</p>
             </div>
@@ -46,7 +37,16 @@
       </div>
     </div>
     <footer class="footer page-footer text-center block third bg-light">
-      <br><br>
+      <br>
+      <div class="social-icon-set">
+        <div class="social-icon">
+          <a href="https://www.linkedin.com/in/joshua-jake-bates/"><img src="./assets/images/svg/social-1_logo-linkedin.svg" ></a>
+        </div>
+        <div class="social-icon">
+          <a href="https://github.com/jpbates13"><img src="./assets/images/svg/social-1_logo-github.svg"></a>
+        </div>
+      </div>
+      <br>
     <p>Copyright &copy <script type="text/javascript">document.write( new Date().getFullYear() );</script> JakeBates.com</p>
     </footer>
   </body>
