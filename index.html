@@ -2,55 +2,24 @@
 	<head>
 		<title> Jake Bates - Home</title>
 		<meta charset="utf-8">
-  		<meta name="viewport" content="width=device-width, initial-scale=1">
-  		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/style.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 		<script type = "text/javascript" language = "javascript">
-         $(document).ready(function() {
-         	$(".block").fadeOut(0);
-            $(".first").fadeIn(1000, function(){$(".second").slideDown(750, function(){$(".third").fadeIn(750)})});
-            $(".first").hover(function(){
-         		$( ".shakeable" ).effect("shake", {direction: "up", times: 1, distance: 10});
-         	});
-         });
-         
-      </script>
-      <style>
-      @media only screen and (min-width: 767px){
-        .footer {
-          position: fixed;
-          left: 0;
-          bottom: 0;
-          width: 100%;
-          text-align: center;
-        }
-      }
-      .social-icon{
-        display:inline-block;
-      }
-      .bio{
-        padding-top: 13%;
-      }
-      @media only screen and (max-width: 767px){
-        .bio{
-          text-align: center !important;
-        }
-        .headshot{
-          text-align: center !important;
-          display:inline-block !important;
-        }
-      }
-      </style>
+      $(document).ready(function() {
+        $("#header-home").load("./assets/header.html"); 
+        $("#footer-home").load("./assets/footer.html"); 
+        $(".block").hide();
+        $(".first").fadeIn(1000, function(){$(".second").slideDown(750, function(){$(".third").fadeIn(750)})});
+      });     
+    </script>
 	</head>
   <body>
     <div class="container">
-      <div class="header page-header">
-        <h1>Jake Bates</h1>
-        <hr/>
-      </div>
+    <div id="header-home"></div>
       <div class="row d-flex h-100">
           <div class="headshot col-md-6 justify-content-center">
             <div class="block second"><br><img style="max-width: 75%; height: auto" class="img-fluid" src="./assets/images/headshot.png"/></div>
@@ -62,17 +31,6 @@
           </div>
       </div>
     </div>
-    <footer class="footer page-footer text-center block third bg-light">
-      <br>
-      <div class="social-icon-set">
-        <div class="social-icon">
-          <a href="https://www.linkedin.com/in/joshua-jake-bates/"><img src="./assets/images/svg/social-1_logo-linkedin.svg" ></a>
-        </div>
-        <div class="social-icon">
-          <a href="http://www.linkedin.com/in/joshua-jake-bates"><img src="./assets/images/svg/social-1_logo-github.svg"></a>
-        </div>
-      </div>
-    <p>Copyright &copy <script type="text/javascript">document.write( new Date().getFullYear() );</script> JakeBates.com</p>
-    </footer>
   </body>
+  <footer id="footer-home"> </footer>
 </html>
