@@ -10,7 +10,7 @@
 	  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 	  	<script type = "text/javascript" language = "javascript">
          $(document).ready(function() {
-         	if(document.URL.includes("index.html")){
+         	if(document.URL.includes("index.html") || window.location.pathname == '/'){
 	         	$(".block").fadeOut(0);
 	            $(".first").fadeIn(1000, function(){$(".second").slideDown(750, function(){$(".third").fadeIn(750)})});
 	            $(".first").hover(function(){
