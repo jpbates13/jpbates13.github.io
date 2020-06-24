@@ -21,6 +21,10 @@
     text-align: center !important;
     display:inline-block !important;
   }
+  .pageMenu{
+    display:inline-block !important;
+    text-align: left !important;
+  }
 }
 
 
