@@ -1,0 +1,81 @@
+#progress-bar {
+  border-radius: 1em;
+  height: 7em;
+}
+#container {
+  margin: 3em 3em;
+}
+#countdown {
+  width: 100%;
+  font-family: "Poiret One", Arial;
+  font-size: 2em;
+  text-align: center;
+  /*margin-top: 3em;*/
+}
+#progress-bar {
+  height: 7em;
+  background: #42f492;
+  animation: myfirst 3.25s;
+  -moz-animation: myfirst 3.25s infinite; /* Firefox */
+  -webkit-animation: myfirst 3.25s infinite; /* Safari and Chrome */
+}
+
+@-moz-keyframes myfirst /* Firefox */ {
+  0% {
+    background: #00db7f;
+  }
+  50% {
+    background: #009657;
+  }
+  100% {
+    background: #00db7f;
+  }
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */ {
+  0% {
+    background: #00db7f;
+  }
+  50% {
+    background: #009657;
+  }
+  100% {
+    background: #00db7f;
+  }
+}
+#percent {
+  font-family: "Poiret One", Arial;
+  font-size: 1.5em;
+  float: right;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 1em;
+  color: white;
+  animation: mysecond 3.25s;
+  -moz-animation: mysecond 3.25s infinite; /* Firefox */
+  -webkit-animation: mysecond 3.25s infinite; /* Safari and Chrome */
+}
+@-moz-keyframes mysecond /* Firefox */ {
+  0% {
+    color: black;
+  }
+  50% {
+    color: white;
+  }
+  100% {
+    color: black;
+  }
+}
+
+@-webkit-keyframes mysecond /* Safari and Chrome */ {
+  0% {
+    color: black;
+  }
+  50% {
+    color: white;
+  }
+  100% {
+    color: black;
+  }
+}
