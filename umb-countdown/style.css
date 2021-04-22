@@ -14,7 +14,6 @@
 }
 h1 {
   text-align: center;
-  font-family: "Poiret One", Arial;
   font-size: 4em;
 }
 #progress-bar {
@@ -90,9 +89,33 @@ h1 {
 }
 
 .footer {
-  position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
   text-align: center;
+}
+
+@media only screen and (min-width: 767px) {
+  .footer {
+    position: fixed;
+  }
+}
+
+* {
+  font-family: Arial;
+}
+
+.umb-logo {
+  height: auto;
+  width: 10em;
+  display: inline-block;
+}
+.title-text {
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.big-title {
+  display: flex;
+  justify-content: center;
 }
