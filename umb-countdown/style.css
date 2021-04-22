@@ -12,6 +12,11 @@
   text-align: center;
   /*margin-top: 3em;*/
 }
+h1 {
+  text-align: center;
+  font-family: "Poiret One", Arial;
+  font-size: 4em;
+}
 #progress-bar {
   height: 7em;
   background: #42f492;
@@ -22,25 +27,25 @@
 
 @-moz-keyframes myfirst /* Firefox */ {
   0% {
-    background: #00db7f;
+    background: #0083d4;
   }
   50% {
-    background: #009657;
+    background: #005081;
   }
   100% {
-    background: #00db7f;
+    background: #0083d4;
   }
 }
 
 @-webkit-keyframes myfirst /* Safari and Chrome */ {
   0% {
-    background: #00db7f;
+    background: #0083d4;
   }
   50% {
-    background: #009657;
+    background: #005081;
   }
   100% {
-    background: #00db7f;
+    background: #0083d4;
   }
 }
 #percent {
@@ -78,4 +83,16 @@
   100% {
     color: black;
   }
+}
+
+.social-icon {
+  display: inline-block;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
 }

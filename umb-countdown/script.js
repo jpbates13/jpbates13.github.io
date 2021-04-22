@@ -4,7 +4,6 @@ function getDaysRemaining(endtime){
     var minutes = Math.floor(t/(1000*60))
     var hours = Math.floor(t/(1000*60*60))
     var days = Math.floor( t/(1000*60*60*24) );
-
     hours = hours - (days*24);
     minutes = minutes - (days * 24 * 60) - (hours * 60);
     seconds = seconds - (days * 24 * 60 * 60) - (hours * 60 * 60) - (minutes * 60);
@@ -35,9 +34,9 @@ function getDaysRemaining(endtime){
     };
   }
   function humaniseSince(days, hours, minutes, seconds) {
-    var text = hours.toString(); 
-    //text = text.concat(" days, ");
-    //text = text.concat(hours.toString());
+    var text = days.toString(); 
+    text = text.concat(" days, ");
+    text = text.concat(hours.toString());
     text = text.concat( " hours, "); 
     text = text.concat(minutes.toString());
     text = text.concat(" minutes, ");
@@ -61,30 +60,13 @@ var x = setInterval(function() {
 
   var today = new Date();
 
-  var startTime = new Date(monthNames[today.getMonth()] + ' ' + today.getDate() + ' ' + today.getFullYear() + " 8:30");
-  var endTime = new Date(monthNames[today.getMonth()] + ' ' + today.getDate() + ' ' + today.getFullYear() + " 17:15");
-  var endFriTime = new Date(monthNames[today.getMonth()] + ' ' + today.getDate() + ' ' + today.getFullYear() + " 13:00");
+  var startDate = 'March 11 2020 13:26';
+  var endDate = 'September 7 2021 08:00';
 
-  var startDate = monthNames[today.getMonth()] + ' ' + today.getDate() + ' ' + today.getFullYear() + ' 08:30';
-  var endDate = monthNames[today.getMonth()] + ' ' + today.getDate() + ' ' + today.getFullYear() + ' 17:15';
- 
-  if(today.getDay() == 5){
-  	if(today > endFriTime || today < startTime){
-  		var percentage = document.getElementById('percent');
-  		percent.innerHTML = 'No work right now';
-  		var countdown = document.getElementById('countdown');
-  		countdown.innerHTML = "There is no work right now.";
-  		return;
-  	}
-  	endDate = monthNames[today.getMonth()] + ' ' + today.getDate() + ' ' + today.getFullYear() + ' 13:00';
-  }
-  if(today.getDay() == 6  || today.getDay() == 0 || today > endTime || today < startTime){
-  	var percentage = document.getElementById('percent');
-  	percent.innerHTML = 'No work right now';
-  	var countdown = document.getElementById('countdown');
-  	countdown.innerHTML = "There is no work right now.";
-  	return;
-  }
+  var startTime = new Date(startDate);
+  var endTime = new Date(endDate);
+  
+  
   var timeGone = getTimeSince(startDate);
   var daysLeft = getDaysRemaining(endDate);
   var sinceText =  humaniseSince(timeGone['days'], timeGone['hours'], timeGone['minutes'], timeGone['seconds']);
