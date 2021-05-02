@@ -72,6 +72,7 @@ var x = setInterval(function() {
   var sinceText =  humaniseSince(timeGone['days'], timeGone['hours'], timeGone['minutes'], timeGone['seconds']);
   var untilText = humaniseSince(daysLeft['days'], daysLeft['hours'], daysLeft['minutes'], daysLeft['seconds'] );
   var percentComplete = getPercentage(startDate, endDate);
+  percentComplete = Math.round(percentComplete * 100000) / 100000;
   if($(window).width() < 960) {
   	percentComplete = Math.round(percentComplete * 1000) / 1000;
   }
