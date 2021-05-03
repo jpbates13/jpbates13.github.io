@@ -1,7 +1,7 @@
-const DEBUG = false;
+var DEBUG = false;
 if (DEBUG) {
   var delayed = new Date();
-  delayed.setSeconds(delayed.getSeconds() + 5);
+  delayed.setSeconds(delayed.getSeconds() + 65);
 }
 
 function getDaysRemaining(endtime) {
@@ -125,6 +125,16 @@ var x = setInterval(function () {
   percent.innerHTML = percentComplete.toString() + "% complete";
 
   if (today >= endTime) {
+    document.getElementById("progress-bar").style.width =
+    "100%";
+    percent.innerHTML = "100% complete";
+    countdown.innerHTML =
+    "<p> Welcome back!! </p>" +
+    "<p> 0 days, 0 hours, 0 minutes, and 0 seconds"  +
+    " remaining until " +
+    endDate.toString() +
+    "</p>";
+
     var end = Date.now() + 15 * 1000;
 
     var colors = ["#005081", "#ffffff"];
