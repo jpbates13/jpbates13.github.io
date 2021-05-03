@@ -1,4 +1,4 @@
-var DEBUG = false;
+const DEBUG = false;
 if (DEBUG) {
   var delayed = new Date();
   delayed.setSeconds(delayed.getSeconds() + 65);
