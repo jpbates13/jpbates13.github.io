@@ -126,4 +126,7 @@ h1 {
   #countdown {
     font-size: 1em;
   }
+  #percent {
+    font-size: 1em;
+  }
 }
