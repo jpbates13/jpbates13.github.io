@@ -1,7 +1,7 @@
 const DEBUG = false;
 if (DEBUG) {
   var delayed = new Date();
-  delayed.setSeconds(delayed.getSeconds() + 65);
+  delayed.setSeconds(delayed.getSeconds() + 10);
 }
 
 function getDaysRemaining(endtime) {
@@ -114,13 +114,10 @@ var x = setInterval(function () {
   countdown.innerHTML =
     "<p>" +
     sinceText +
-    " passed since " +
-    startDate.toString() +
+    " passed since campus was shifted to remote modality."+
     "<p> " +
     untilText +
-    " remaining until " +
-    endDate.toString() +
-    "</p>";
+    " remaining until classes resume on September 7th.</p>";
   var percentage = document.getElementById("percent");
   percent.innerHTML = percentComplete.toString() + "% complete";
 
@@ -131,9 +128,7 @@ var x = setInterval(function () {
     countdown.innerHTML =
     "<p> Welcome back!! </p>" +
     "<p> 0 days, 0 hours, 0 minutes, and 0 seconds"  +
-    " remaining until " +
-    endDate.toString() +
-    "</p>";
+    " remaining until classes resume on September 7th.</p>";
 
     var end = Date.now() + 15 * 1000;
 
